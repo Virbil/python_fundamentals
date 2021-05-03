@@ -1,0 +1,7 @@
+#5
+cities = ["London", "Paris", "Tokyo"]
+for city in cities:
+    print(city)
+
+OUTPUT:
+London, Paris, Tokyo
