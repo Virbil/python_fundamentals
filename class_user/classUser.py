@@ -13,10 +13,12 @@ class User:
     def display_user_balance(self):
         print(f"User: {self.user}, Account Balance: {self.balance}")
 
-    # def transfer_money(self, other_user, amount):
-    #     self.balance -= amount
-    #     other_user.balance += amount
-    #     return other_user.balance
+    def transfer_money(self, receiving_user, amount):
+        # print("Hit transfer Method.")
+        # print(f"Giving account: {self.user}. Receiving account: {receiving_user}")
+        self.balance -= amount
+        receiving_user.balance += amount
+        return receiving_user.balance
 
 bryce = User("virbil", "virbil@gmail.com")
 stef = User("red", "red@gmail.com")
@@ -39,4 +41,6 @@ harvey.make_withdrawal(108)
 harvey.make_withdrawal(4621)
 harvey.display_user_balance()
 
-# bryce.transfer_money(harvey, 56)
+bryce.transfer_money(harvey, 56)
+bryce.display_user_balance()
+harvey.display_user_balance()
