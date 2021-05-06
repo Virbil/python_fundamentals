@@ -18,18 +18,16 @@ class BankAccount:
 
     def yield_interest(self):
         self.balance += self.balance * self.int_rate
-        return self.balance
+        return self
 
 print("Main account:")
 my_main_account = BankAccount(0.01, 1000)
 my_main_account.deposit(500).deposit(300).deposit(2896).withdraw(57).display_account_info()
-my_main_account.yield_interest() #.display_account_info()  can't get this to chain
-my_main_account.display_account_info()
+my_main_account.yield_interest().display_account_info()
 print("-"*80)
 
 
 print("Savings account:")
 my_savings_account = BankAccount(0.05, 5750)
 my_savings_account.deposit(1379).deposit(442).withdraw(29).withdraw(106).withdraw(252).withdraw(13).display_account_info()
-my_savings_account.yield_interest()
-my_savings_account.display_account_info()
+my_savings_account.yield_interest().display_account_info()
