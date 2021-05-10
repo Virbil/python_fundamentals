@@ -30,7 +30,6 @@ class Store:
     #  the price by the percent_discount given (use the method you wrote 
     #  in the Product class!)
     def set_clearance(self, category, percent_discount):
-        print("Code for clearance goes here")
         for product in self.products:
             if product.category == category:
                 product.update_price(percent_discount, False)
